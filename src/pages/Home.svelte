@@ -19,10 +19,7 @@
     isSharedSettings,
     customPresets,
   } from "@/store";
-  import FileConverter, {
-    downloadAll,
-    getResult,
-  } from "@/components/FileConverter.svelte";
+  import FileConverter, { getResult } from "@/components/FileConverter.svelte";
   import ConvertButton from "@/components/ConvertButton.svelte";
   import Header from "@/components/Header.svelte";
   import { config, type FormatOption } from "@/config";
@@ -39,9 +36,11 @@
   import gearSvg from "@/assets/gear.svg?raw";
   import SettingsSummary from "@/components/SettingsSummary.svelte";
   import UiImagePreview from "@/components/ui/UIImagePreview.svelte";
+  import UiDownloadData from "@/components/ui/UIDownloadData.svelte";
 
   let refConvertButton: HTMLDivElement;
   $: resultFile = null as File | null;
+  $: resultFileData = null as Blob | null;
 
   $: {
     if ($filesReadyForDownload.size <= 0) {
@@ -53,6 +52,7 @@
     if ($isDownloadReady) {
       const { data, filename } = getResult();
       resultFile = new File([data], filename, { type: "image/gif" });
+      resultFileData = data;
     }
   }
 
@@ -168,8 +168,11 @@
 
         <UiImagePreview file={resultFile} showRemoveButton={false} />
 
-        <UiButton title="Download GIF" large on:click={() => downloadAll(true)}
-          >Download</UiButton
+        <UiDownloadData
+          data={resultFileData}
+          type="image/gif"
+          filename={resultFile.name}
+          useNative={true}>Download</UiDownloadData
         >
       </div>
     {/if}
