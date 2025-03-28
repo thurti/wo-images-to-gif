@@ -19,7 +19,7 @@ export const config = {
   disableServiceWorker: false,
   updateInterval: 20000,
   version: import.meta.env.PACKAGE_VERSION,
-  url: "https://worksoffline.app/images-to-gif",
+  url: "https://worksoffline.app/images-to-gif-converter",
   github: "https://github.com/thurti/wo-images-to-gif",
   title: "Images to Gif Converter",
   titleHeader: "Images to\n Gif Converter",
