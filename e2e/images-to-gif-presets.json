@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "label": "My Preset",
+    "value": "val1",
+    "ext": "gif",
+    "mimetype": "image/gif",
+    "isCustomPreset": false,
+    "isRemovable": true,
+    "selectedSettings": {
+      "filter_complex": { "id": "filter_complex-8" },
+      "duration": { "id": "gif-duration-custom", "value": "0.5" },
+      "scale": { "id": "gif-scale-custom", "value": "80" },
+      "loop": { "id": "gif-loop-0" }
+    }
+  },
+  {
+    "id": "2",
+    "label": "Test 2",
+    "value": "val2",
+    "ext": "gif",
+    "mimetype": "image/gif",
+    "isCustomPreset": false,
+    "isRemovable": true,
+    "selectedSettings": {
+      "filter_complex": { "id": "filter_complex-8" },
+      "duration": { "id": "gif-duration-custom", "value": "0.5" },
+      "scale": { "id": "gif-scale-custom", "value": "80" },
+      "loop": { "id": "gif-loop-0" }
+    }
+  }
+]
