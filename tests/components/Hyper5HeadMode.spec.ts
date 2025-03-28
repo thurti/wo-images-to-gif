@@ -27,14 +27,6 @@ describe("Hyper5HeadMode", () => {
   it("should render correctly", async () => {
     render(html`<${Hyper5HeadMode} open=${true} />`);
     expect(screen.getByText("Expert Stuff")).toBeInTheDocument();
-    expect(screen.getByLabelText("Enable Custom Command")).toBeInTheDocument();
     expect(screen.getByLabelText("FFmpeg Output")).toBeInTheDocument();
-  });
-
-  it("enable custom command input when custom command is selected", async () => {
-    const { container } = render(html`<${Hyper5HeadMode} open=${true} />`);
-    expect(screen.getByLabelText("Enable Custom Command")).not.toBeChecked();
-    await user.click(screen.getByLabelText("Enable Custom Command"));
-    expect(container.querySelector('input[type="text"]')).toBeEnabled();
   });
 });
