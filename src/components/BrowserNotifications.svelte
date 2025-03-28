@@ -16,7 +16,7 @@
   $: if ($isDownloadReady) {
     if (isNotificationSupported && get(notifyOnConversionReady)) {
       new Notification("Conversion completed", {
-        body: "Your files are ready for download.",
+        body: "Your file is ready for download.",
         icon: config.notificationIcon,
       });
     }
