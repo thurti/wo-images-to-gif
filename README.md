@@ -12,7 +12,7 @@ npm run dev
 
 ## FFmpeg Update
 
-FFmpeg gets cached on its own. To update ffmpeg copy new files to `public/lib/ffmpeg-st` and set new version number in `.env`. This would udpate the cached version.
+FFmpeg gets cached on its own. To update ffmpeg copy new files to `public/lib/ffmpeg` and set new version number in `.env`. This would udpate the cached version.
 
 ## Browser & Server Requirements
 
